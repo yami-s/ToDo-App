@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+
+	body{
+        background-color: #575254;
+    }
+    
+    input{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+    
+    .center-column{
+        text-align: center;
+        width:600px;
+        margin: 20px auto;
+        padding:20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+    }
+    
+    .btn-info{
+        width: 100%;
+    }
+    .btn-danger{
+        background-color: #98113d;
+        border-color: #98113d;
+        width: 100%;
+    }
+
+</style>
+
+<body>
+    <div class="center-column">
+        <h2>Are you sure you want to delete "{{task}}" ?</h2>
+        <a class="btn btn-sm btn-danger" href="{% url 'index' %}">Cancel</a>
+        <form method="POST" action="">
+        {% csrf_token %}
+        <input class="btn btn-info" type="submit" name="Confirm">
+        </form>
+    </div>
+</body>
