@@ -1,6 +1,6 @@
-# ToDoApp
+# ToDo List
 ### Description
-ToDoApp with Django
+ToDo List App with Django
 
 ###  Setup
 In a python virtual environment, run:
